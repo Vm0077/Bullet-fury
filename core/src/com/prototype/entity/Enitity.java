@@ -10,16 +10,38 @@ abstract public class Enitity {
 
 
     public Sprite sprite;
-    public float Velocity;
+    public Vector2 Vec;
     public Texture texture;
     public float Width, Height;
     public Vector2 pos,touchPos;
-    public double hp;
+    public Vector2 interD;
+    public double hp, maxHp;
 
-    public Rectangle box;
+    public Rectangle box,intersect;
 
-    public void setVelocity(float velocity) {
-        Velocity = velocity;
+    public double getHp() {
+        return hp;
+    }
+
+    public double getMaxHp() {
+        return maxHp;
+    }
+
+    public void setVx(float vx) {
+        Vec.x = vx;
+    }
+
+    public void setVy(float vy) {
+        Vec.y = vy;
+    }
+    public void setVec(float vx,float vy)
+    {
+        Vec.x = vx;
+        Vec.y = vy;
+    }
+
+    public void setHp(double hp) {
+        this.hp = hp;
     }
 
     abstract public void update(float delta);

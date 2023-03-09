@@ -5,6 +5,13 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 
 public class Prototype extends Game implements InputProcessor {
+	public enum State
+	{
+		PAUSE,
+		RUN,
+		RESUME,
+		STOPPED
+	}
 	static float SCREEN_HEIGHT = 800;
 	static float SCREEN_WIDTH  = 1600;
 	SpriteBatch batch;
